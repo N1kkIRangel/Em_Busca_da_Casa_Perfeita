@@ -1,0 +1,199 @@
+<!Doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-br">
+	<title>Em busca da casa perfeita</title>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+	<style>
+	body{
+		font-family: Concert One, sans-serif;
+		margin:0;
+		padding:0;
+		line-height:1.6;
+		background: linear-gradient(135deg, #f4e1f7, #d5afdf );
+		}
+	.upbar{
+		width: 1250px;
+		height: 20vh;
+		background: linear-gradient(90deg, #a97db0, #9457a4);
+		color: black;
+		margin: 20px auto;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+	.upbar h1{
+		padding-top: 10px;
+		color: black;
+		font-size: 35px;
+		}
+	nav ul{
+		list-style: none;
+		padding:0;
+		display:flex;
+		justify-content:center;
+		gap: 80px;
+		}
+			
+		nav a{ 
+			text-decoration: none;
+			color: black;
+		}
+			
+		nav a:hover{
+			color: #d5afdf;
+		}
+		
+		h1{
+			text-align: center;
+		}
+		
+		.text p{
+			text-align: center;
+			font-style: italic;
+		}
+		
+		.cadastrar{
+			margin: 20px auto;
+			background-color: #a97db0;
+			height: 5vh;
+			width: 200px;
+			border-radius: 15px;
+			text-align:center;
+			cursor: pointer;
+			list-style: none;
+
+		}
+		
+		.cadastrar:hover{
+			color:#d5afdf;
+		}	
+		
+		.cadastrar a{
+			text-decoration: none;
+			color: black;
+		}
+		
+		.pets{
+			display: flex;
+			gap: 100px;
+			justify-content: center;
+			flex-wrap: wrap;
+			transition: 0.5;
+			}
+			
+		.pet:hover{
+			transform: scale(1.05);
+			cursor:pointer;
+			background-color: #c29fc7;
+			}
+			
+		.pet{
+			padding: 20px;
+			border: 1px solid #c29fc7;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+			border-radius: 8px;
+			width: 	250px;
+			}	
+			
+		.pet a{
+			text-decoration: none;
+		}
+		
+		.pet ul{
+			list-style: none;
+			color: black;
+		}
+		
+		.pet h2{
+			color: black;
+			text-align: center;
+		}
+		
+		.pet img{
+			width: 100%;
+			border-radius: 8px;
+		}
+		
+		
+		
+		.desaparecidos{
+			color:#d5afdf;
+		}
+
+		footer{
+			background-color: #9457a4;
+			color: black;
+			text-align: center;
+			font-weight: bold;
+			margin-top: 15px;
+			padding: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div class="upbar">
+	<h1 align="center">Em Busca da Casa Perfeita</h1>
+		<nav>
+		<ul>
+			<li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+			<li><i class="fa-solid fa-paw"></i><a href="ParaAdocao.html">Para adotar</a></li>
+			<li><i class="fa-solid fa-triangle-exclamation"></i><a class="desaparecidos" href="desaparecidos.html">Desaparecidos</a></li>
+			<li><i class="fa-solid fa-desktop"></i><a href="Contato.html">Contato</a></li>
+			<li><i class="fa-brands fa-pix"></i><a href="ajudar.html">Quero Ajudar</a></li>
+		</ul>
+		</nav>
+	</div>
+</header>
+	<div class="text">	
+	<h1>Desaparecidos!</h1>
+	<p>Você viu esse bichinho? Ajude eles se reencontrarem com suas famílias.</p>
+	</div>
+	<br>
+	<div class="cadastrar">
+		<li><a href="formMissing.html">+ Cadastre seu bichinho</a></li>
+	</div>
+	<br>
+<div class="pets">	
+		<div class="pet">
+		<a href="#">
+		<h2>Menguinho</h2>
+		<img src="img/julio.jpg" alt="macaco do flamengo">
+			<ul>
+				<li>Raça: macaco prego</li>
+				<li>Cor: marrom e preto</li>
+				<li>Sexo: macho</li>
+				<li>Idade: 10 anos</li>
+				<li>Visto pela última vez?</li> 
+				<p>Visto há uma semana em frente a Praça das Pitangueiras.</p>
+				<h3>Contato</h3>
+				<li>E-mail: FuracaoRubroNegro@hotmail.com</li>
+				<li>Telefone: 55924676941</li>
+			</ul>
+		</a>	
+		</div>
+		<div class="pet">
+			<h2>Pepe</h2>
+		<img src="img/pepe.webp" alt="sapo sorridente">
+			<ul>
+				<li>Raça: risus</li>
+				<li>Cor: verde</li>
+				<li>Sexo: macho</li>
+				<li>Idade: 15 anos</li>
+				<li>Visto pela última vez?</li>
+				<p>Visto há uma semana em frente a Praça das Pitangueiras.</p>
+				<h3>Contato</h3>
+				<li>E-mail: ElonCrusaderx1e@yahoo.com</li>
+				<li>Telefone: 21943570984</li>
+			</ul>
+			</a>
+		</div>
+	</div>
+
+<footer>
+	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
+</footer>
+</body>
+</html>

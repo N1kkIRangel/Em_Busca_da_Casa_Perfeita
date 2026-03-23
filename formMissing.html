@@ -1,0 +1,163 @@
+<!Doctype html>
+<head>
+		<meta charset="utf-8">
+		<meta lang="pt-br">
+		<title>Cadastrar Pet</title>
+		<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+		<style>
+			body{
+		font-family: Concert One, sans-serif;
+		margin:0;
+		padding:0;
+		line-height:1.6;
+		background: linear-gradient(135deg, #f4e1f7, #d5afdf);
+		}
+	.upbar{
+		width: 1250px;
+		height: 20vh;
+		background: linear-gradient(90deg, #a97db0, #9457a4);
+		color: black;
+		margin: 20px auto;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+	.upbar h1{
+		padding-top: 10px;
+		color: black;
+		font-size: 35px;
+		}
+	nav ul{
+		list-style: none;
+		padding:0;
+		display:flex;
+		justify-content:center;
+		gap: 80px;
+		}
+			
+		nav a{ 
+			text-decoration: none;
+			color: black;
+		}
+			
+		nav a:hover{
+			color: #d5afdf;
+		}
+		
+		.desaparecidos{
+			color: #d5afdf;
+		}
+		
+		.container{
+			background: linear-gradient(135deg, #d5afdf, #c29fc7);
+			width: 500px;
+			padding: 40px;
+			margin: 40px auto;
+			border-radius: 15px;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+			
+			}
+			input{
+			width: 100%;
+			padding: 10px;
+			margin-top: 5px;
+			border-radius: 6px;
+			border: 1px solid #ccc;
+			font-size: 14px;
+			transition: 0.3s;
+		}
+		input:focus{
+			border-color: #4facfe;
+			outline: none;
+			box-shadow: 0 0 5px rgba(79,172,254,0.5);
+		}
+		label{
+			display: block;
+			margin-top: 12px;
+			font-weight: bold;
+			color: black;
+		}
+		button{
+				width: 105%;
+				padding: 15px;
+				background-color: #9457a4;
+				border: none;
+				color: white;
+				font-size: 16px;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			button:hover{
+				background-color: #a97db0;
+			}
+			.reset-btn{
+				background-color: #e74c3c;
+				margin-top: 10px;
+				}
+				
+			.reset-btn:hover{
+				background-color: #c0392b;
+			}
+			
+		footer{
+			background-color: #9457a4;
+			color: black;
+			text-align: center;
+			font-weight: bold;
+			margin-top: 15px;
+			padding: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+		</style>
+</head>
+	<body>
+		<header>
+	<div class="upbar">
+	<h1 align="center">Em Busca da Casa Perfeita</h1>
+		<nav>
+		<ul>
+			<li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+			<li><i class="fa-solid fa-paw"></i><a href="ParaAdocao.html">Para adotar</a></li>
+			<li><i class="fa-solid fa-triangle-exclamation"></i><a class="desaparecidos" href="desaparecidos.html">Desaparecidos</a></li>
+			<li><i class="fa-solid fa-desktop"></i><a href="Contato.html">Contato</a></li>
+			<li><i class="fa-brands fa-pix"></i><a href="ajudar.html">Quero Ajudar</a></li>
+		</ul>
+		</nav>
+	</div>
+</header>
+
+	<div class="container">
+		<h2 align="center">Cadastre seu bichinho desaparecido</h2>
+		<form id="cadastrar">
+			<label>Nome</label>
+			<input type="text" id="nome" placeholder="Nome do seu bichinho" required>
+			<label>Foto</label>
+			<input type="file" id="foto" placeholder="foto do seu bichinho" required>
+			<label>Raça</label>
+			<input type="text" id="raca" placeholder="Raça do seu bichinho">
+			<label>Cor</label>
+			<input type="text" id="cor" placeholder="cor do seu bichinho">
+			<label>Sexo</label>
+			<label><input type="radio" requided>Fêmea</label>
+			<label><input type="radio" requided>Macho</label>
+			<label>Idade</label>
+			<input type="text" placeholder="Idade do seu bichinho">
+			<label>Visto pela última vez?</label>
+			<textarea rows="10" placeholder="Digite aqui..." required></textarea>
+			<input type="date" required>
+			<h3>Contato</h3>
+			<label>E-mail</label>
+			<input type="email" placeholder="Seu email">
+			<label>Telefone</label>
+			<input type="text" placeholder="Seu telefone" required>
+			<button type="submit">Cadastrar pet</button>
+			<button type="reset" class="reset-btn">Limpar</button>
+			</form>
+	</div>
+
+<footer>
+	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
+</footer>
+	</body>
+</html>

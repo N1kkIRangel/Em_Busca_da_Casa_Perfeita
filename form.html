@@ -1,0 +1,165 @@
+<!Doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-br">
+	<title>Para Adoção</title>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+	<style>
+		body{
+			font-family: Concert One, sans-serif;
+			margin:0;
+			padding:0;
+			line-height:1.6;
+			background: linear-gradient(135deg, #f4e1f7, #d5afdf );
+		}
+		form{
+			margin: 0 auto;
+		}
+		button{
+			margin-top: 20px;
+			width: 100%;
+			padding: 12px;
+			background-color: #7b3f8c;
+			color: black;
+			font-size: 16px;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: 0.3s;
+			font-weight: bold;
+		}
+		button:hover{
+			transform: scale(1.03);
+			background-color: #7b3f8c;
+		}
+		input{
+			width: 100%;
+			padding: 10px;
+			margin-top: 5px;
+			border-radius: 6px;
+			border: 1px solid #ccc;
+			font-size: 14px;
+			transition: 0.3s;
+		}
+		input:focus{
+			border-color: #4facfe;
+			outline: none;
+			box-shadow: 0 0 5px rgba(79,172,254,0.5);
+		}
+		label{
+			display: block;
+			margin-top: 12px;
+			font-weight: bold;
+			color: black;
+		}
+		h2{
+			text-align: center;
+			margin-bottom: 20px;
+			color: black;
+		}
+		.container{
+			width: 380px;
+			background-color: #b983c2;
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+			margin: 40px auto;
+		}
+		.font{
+			font-size: 15px;
+			font-weight: normal;
+		}
+		.upbar{
+			width: 1250px;
+			height: 20vh;
+			background: linear-gradient(90deg, #a97db0, #9457a4);
+			color: black;
+			margin: 20px auto;
+			border-radius: 15px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+		.upbar h1{
+			padding-top: 10px;
+			color: black;
+			font-size: 35px;
+		}
+		nav ul{
+			list-style: none;
+			padding:0;
+			display:flex;
+			justify-content:center;
+			gap: 80px;
+		}
+			
+		nav a{ 
+			text-decoration: none;
+			color: black;
+		}
+			
+		nav a:hover{
+			color: #d5afdf;
+		}
+		
+		footer{
+			background-color: #9457a4;
+			color: black;
+			text-align: center;
+			font-weight: bold;
+			margin-top: 15px;
+			padding: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+	</style>
+</head>	
+<body>
+	<header>
+		<div class="upbar">
+			<h1 align="center">Em Busca da Casa Perfeita</h1>
+			<nav>
+				<ul>
+					<li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+					<li><i class="fa-solid fa-paw"></i><a href="ParaAdocao.html">Para adotar</a></li>
+					<li><i class="fa-solid fa-triangle-exclamation"></i><a href="desaparecidos.html">Desaparecidos</a></li>
+					<li><i class="fa-solid fa-desktop"></i><a href="Contato.html">Contato</a></li>
+					<li><i class="fa-solid fa-circle-info"></i><a href="#">Ajudar</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+		<div class="container">
+			<h2>Formulario de Adoção</h2>
+			<form id="formulario" action="resultado"> 
+				<label>Nome</label>
+				<input type="text" id="nome" required>
+				<label>E-mail</label>
+				<input type="email" id="email" required>
+				<label>Data de nascimento</label>
+				<input type="date" id="data" required>
+				<label>Cidade</label>
+				<input type="text" id="cidade" required>
+				<label>Bairro</label>
+				<input type="text" id="bairro">
+				<label>Cep</label>
+				<input type="text" id="cep">
+				<label>Telefone</label>
+				<input type="text" id="telefone" required>
+				<h2 align="center">Ambiente familiar</h2>
+				<input type="number" placeholder="Quantos membros tem em sua casa?" required>
+				<select required>
+				<option value="" required>Você tem outros pets?</option>
+				<option>Sim</option>
+				<option>Não</option>
+				</select>
+				<label class="font">Nos conte sobre seu ambiente familiar e o por quê quer adotar esse pet.</label>
+				<textarea rows="50" required>Digite aqui...</textarea>
+				<button type="submit">Enviar</button>
+				<button type="reset">Limpar</button>
+			</form>
+		</div>
+		<script src="js/java1.js"></script>
+	<footer>
+		<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da Casa perfeita | Desenvolvido por: WebCreate
+	</footer>
+</body>
+</html>
