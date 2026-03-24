@@ -1,0 +1,118 @@
+<!Doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="pt-br">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Doações</title>
+		<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+	<style>
+		body{
+			font-family: Concert One, sans-serif;
+			margin:0;
+			padding:0;
+			line-height:1.6;
+			background: linear-gradient(135deg, #f4e1f7, #d5afdf );
+		}
+		.upbar{
+			width: 1250px;
+			height: 20vh;
+			background: linear-gradient(90deg, #a97db0, #9457a4);
+			color: black;
+			margin: 20px auto;
+			border-radius: 15px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+		.upbar h1{
+			padding-top: 10px;
+			color: black;
+			font-size: 35px;
+		}
+		nav ul{
+			list-style: none;
+			padding:0;
+			display:flex;
+			justify-content:center;
+			gap: 80px;
+			}
+			
+		nav a{ 
+			text-decoration: none;
+			color: black;
+		}
+			
+		nav a:hover{
+			color: #d5afdf;
+		}
+		footer{
+			background-color: #9457a4;
+			color: black;
+			text-align: center;
+			font-weight: bold;
+			margin-top: 15px;
+			padding: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+		.container {
+			background: #d5afdf;
+			padding: 30px;
+			border-radius: 15px;
+			text-align: center;
+			width: 300px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.7);
+			margin: 40px auto;
+		}
+		.pix-barra {
+			background-color: #f4e1f7;
+			padding: 10px;
+			border-radius: 8px;
+			margin: 15px 0;
+			font-weight: bold;
+		}
+		 button {
+			background-color: #f4e1f7;
+			color: black;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 8px;
+			cursor: pointer;
+			font-weight:bold;
+		}
+		 button:hover {
+			background: #9457a4;
+			font-weight: bold;
+		}
+	</style>
+	</head>
+	<body>
+		<header>
+			<div class="upbar">
+				<h1 align="center">Em Busca da Casa Perfeita</h1>
+			<nav>
+				<ul>
+					<li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+					<li><i class="fa-solid fa-paw"></i><a class="paraadocao" href="ParaAdocao.html">Para adotar</a></li>
+					<li><i class="fa-solid fa-triangle-exclamation"></i><a href="desaparecidos.html">Desaparecidos</a></li>
+					<li><i class="fa-solid fa-desktop"></i><a href="Contato.html">Contato</a></li>
+					<li><i class="fa-brands fa-pix"></i><a href="pix.html">Quero Ajudar</a></li>
+				</ul>
+			</nav>
+			</div>
+		</header>
+			<div class="container">
+				<h1>Apoie nossa ONG<i class="fa-solid fa-heart"></i></h1>
+				<p>Sua doação faz a diferença!</p>
+				<p>Nossa Chave Pix:</p>
+				<img src="img/qr.png" alt="qrCode para doação">
+				<div class="pix-barra" id="pixkey">
+					embuscadacasaperfeita26@gmail.com
+				</div>
+				<button onclick="copiarPix()">Copiar Pix</button>
+				<p style="margin-top: 15px;"><i class="fa-solid fa-paw"></i>Obrigado pela doação<i class="fa-solid fa-paw"></i></p>
+			</div>
+			<script src="js/java1.js"></script>
+		<footer>
+			<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
+		</footer>	
+	</body>
+</html>
