@@ -130,32 +130,52 @@
 	<div class="container">
 		<h2 align="center">Cadastre seu bichinho desaparecido</h2>
 		<form id="cadastrar">
-			<label>Nome</label>
-			<input type="text" id="nome" placeholder="Nome do seu bichinho" required>
-			<label>Foto</label>
-			<input type="file" id="foto" placeholder="foto do seu bichinho" required>
-			<label>Raça</label>
-			<input type="text" id="raca" placeholder="Raça do seu bichinho">
-			<label>Cor</label>
-			<input type="text" id="cor" placeholder="cor do seu bichinho">
-			<label>Sexo</label>
-			<label><input type="radio" requided>Fêmea</label>
-			<label><input type="radio" requided>Macho</label>
-			<label>Idade</label>
-			<input type="text" placeholder="Idade do seu bichinho">
-			<label>Visto pela última vez?</label>
-			<textarea rows="10" placeholder="Digite aqui..." required></textarea>
-			<input type="date" required>
-			<h3>Contato</h3>
-			<label>E-mail</label>
-			<input type="email" placeholder="Seu email">
-			<label>Telefone</label>
-			<input type="text" placeholder="Seu telefone" required>
-			<button type="submit">Cadastrar pet</button>
-			<button type="reset" class="reset-btn">Limpar</button>
-			</form>
-	</div>
 
+		<label for="nome">Nome</label>
+		<input type="text" id="nome" placeholder="Nome do seu bichinho" required>
+
+		<label for="foto">Foto</label>
+		<input type="file" id="foto" required>
+
+		<label for="raca">Raça</label>
+		<input type="text" id="raca" placeholder="Raça do seu bichinho">
+
+		<label for="cor">Cor</label>
+		<input type="text" id="cor" placeholder="Cor do seu bichinho">
+
+		<label>Sexo</label>
+		<label for="femea">
+		<input type="radio" id="femea" name="sexo" value="femea" required> Fêmea
+		</label>
+		<label for="macho">
+        <input type="radio" id="macho" name="sexo" value="macho" required> Macho
+		</label>
+
+		<label for="idade">Idade</label>
+		<input type="text" id="idade" placeholder="Idade do seu bichinho">
+
+		<label for="descricao">Visto pela última vez?</label>
+		<textarea id="descricao" rows="10" placeholder="Digite aqui..." required></textarea>
+
+		<label for="data">Data</label>
+		<input type="date" id="data" required>
+
+		<h3>Contato</h3>
+
+		<label for="email">E-mail</label>
+		<input type="email" id="email" placeholder="Seu email">
+
+		<label for="telefone">Telefone</label>
+		<input type="text" id="telefone" placeholder="Seu telefone" required>
+
+		<button type="submit" href="desaparecidos.html">Cadastrar pet</button>
+		<button type="reset" class="reset-btn">Limpar</button>
+	</div>	
+
+</form>
+	
+	
+<script src="js/script_missing.js"></script>
 <footer>
 	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
 </footer>

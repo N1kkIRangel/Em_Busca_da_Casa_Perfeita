@@ -74,7 +74,7 @@
 			color: black;
 		}
 		
-		.pets{
+		.pets, .retorno{
 			display: flex;
 			gap: 100px;
 			justify-content: center;
@@ -88,7 +88,7 @@
 			background-color: #c29fc7;
 			}
 			
-		.pet{
+		.pet, .retorno{
 			padding: 20px;
 			border: 1px solid #c29fc7;
 			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
@@ -115,11 +115,37 @@
 			border-radius: 8px;
 		}
 		
+		.retorno a{
+			text-decoration: none;
+		}
 		
+		.retorno ul{
+			list-style: none;
+			color: black;
+		}
 		
+		.retorno h2{
+			color: black;
+			text-align: center;
+		}
+		
+		.retorno img{
+			width: 100%;
+			border-radius: 8px;
+		}
+		
+		.retorno:hover{
+			transform: scale(1.05);
+			cursor:pointer;
+			background-color: #c29fc7;
+			}
+		.pet li, p{
+			font-weight: normal;
+		}
 		.desaparecidos{
 			color:#d5afdf;
 		}
+		
 
 		footer{
 			background-color: #9457a4;
@@ -158,7 +184,6 @@
 	<br>
 <div class="pets">	
 		<div class="pet">
-		<a href="#">
 		<h2>Menguinho</h2>
 		<img src="img/julio.jpg" alt="macaco do flamengo">
 			<ul>
@@ -172,7 +197,6 @@
 				<li>E-mail: FuracaoRubroNegro@hotmail.com</li>
 				<li>Telefone: 55924676941</li>
 			</ul>
-		</a>	
 		</div>
 		<div class="pet">
 			<h2>Pepe</h2>
@@ -188,10 +212,62 @@
 				<li>E-mail: ElonCrusaderx1e@yahoo.com</li>
 				<li>Telefone: 21943570984</li>
 			</ul>
-			</a>
 		</div>
-	</div>
+		 <div class="retorno">
+        <h2 id="nome"></h2>
+        <img id="foto">
 
+        <ul>
+            <li id="raca"></li>
+            <li id="cor"></li>
+            <li id="sexo"></li>
+            <li id="idade"></li>
+
+            <li>Visto pela última vez?</li>
+            <p id="descricao"></p>
+
+            <li id="data"></li>
+
+            <h3>Contato</h3>
+            <li id="email"></li>
+            <li id="telefone"></li>
+        </ul>
+    </div>
+	</div>
+	</div>
+	<script>
+	document.getElementById("nome").textContent =
+		"" + localStorage.getItem("nome");
+
+	document.getElementById("raca").textContent =
+		"Raça: " + localStorage.getItem("raca");
+
+	document.getElementById("cor").textContent =
+		"Cor: " + localStorage.getItem("cor");
+
+	document.getElementById("sexo").textContent =
+		"Sexo: " + localStorage.getItem("sexo");
+
+	document.getElementById("idade").textContent =
+		"Idade: " + localStorage.getItem("idade");
+
+	document.getElementById("descricao").textContent =
+		"Descrição: " + localStorage.getItem("descricao");
+
+	document.getElementById("data").textContent =
+		"Data: " + localStorage.getItem("data");
+
+	document.getElementById("email").textContent =
+		"E-mail: " + localStorage.getItem("email");
+
+	document.getElementById("telefone").textContent =
+		"Telefone: " + localStorage.getItem("telefone");
+
+	const foto = localStorage.getItem("foto"); //explicar
+	if (foto) {
+		document.getElementById("foto").src = foto; 
+	}
+	</script>
 <footer>
 	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
 </footer>
