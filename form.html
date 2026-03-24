@@ -102,6 +102,9 @@
 		nav a:hover{
 			color: #d5afdf;
 		}
+		.ParaAdocao{
+			color: #d5afdf;
+		}
 		
 		footer{
 			background-color: #9457a4;
@@ -121,7 +124,7 @@
 			<nav>
 				<ul>
 					<li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-					<li><i class="fa-solid fa-paw"></i><a href="ParaAdocao.html">Para adotar</a></li>
+					<li><i class="fa-solid fa-paw"></i><a href="ParaAdocao.html" class="ParaAdocao">Para adotar</a></li>
 					<li><i class="fa-solid fa-triangle-exclamation"></i><a href="desaparecidos.html">Desaparecidos</a></li>
 					<li><i class="fa-solid fa-desktop"></i><a href="Contato.html">Contato</a></li>
 					<li><i class="fa-solid fa-circle-info"></i><a href="pix.html">Ajudar</a></li>
@@ -154,12 +157,12 @@
 				<option>Não</option>
 				</select>
 				<label class="font">Nos conte sobre seu ambiente familiar e o por quê quer adotar esse pet.</label>
-				<textarea rows="50" required>Digite aqui...</textarea>
-				<button type="submit">Enviar</button>
+				<textarea rows="20" required>Digite aqui...</textarea>
+				<button onclick="mensagem()">Enviar</button>
 				<button type="reset">Limpar</button>
 			</form>
 		</div>
-		<script src="js/java1.js"></script>
+		<script src="js/scriptFormAlert.js"></script>
 	<footer>
 		<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da Casa perfeita | Desenvolvido por: WebCreate
 	</footer>
