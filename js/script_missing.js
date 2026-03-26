@@ -34,5 +34,9 @@ form.addEventListener("submit", function(event) {
     reader.readAsDataURL(foto); 
 	}
     };
+	
+	window.location.href="desaparecidos.html";
+
 
 });
+		

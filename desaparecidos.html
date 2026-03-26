@@ -13,7 +13,7 @@
 		margin:0;
 		padding:0;
 		line-height:1.6;
-		background: linear-gradient(135deg, #f4e1f7, #d5afdf );
+		background: linear-gradient(135deg, #f4e1f7, #d5afdf); 
 		}
 	.upbar{
 		width: 1250px;
@@ -76,73 +76,75 @@
 			color: black;
 		}
 		
-		.pets, .retorno{
+		.pets{
 			display: flex;
+			justify-content: center;
 			gap: 100px;
+		}
+		
+		.infopet, .infoloc, .infodono{
+			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
 			transition: 0.5;
+			background: linear-gradient(135deg, #f4e1f7, #d5afdf);
 			}
 			
-		.pet:hover{
-			transform: scale(1.05);
-			cursor:pointer;
-			background-color: #c29fc7;
-			}
-			
-		.pet, .retorno{
+		.infopet, .infoloc, .infodono{
 			padding: 20px;
-			border: 1px solid #c29fc7;
-			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+			border: 1px solid #f4e1f7;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 			border-radius: 8px;
 			width: 	250px;
 			}	
 			
-		.pet a{
-			text-decoration: none;
+		.infopet:hover{
+			background: linear-gradient(135deg, #f4e1f7, #c29fc7);
+			transform: scale(1.05);	
+		}	
+		.js{
+			display: none;
 		}
 		
-		.pet ul{
+		.infopet ul{
 			list-style: none;
 			color: black;
 		}
 		
-		.pet h2{
+		.infopet  h2{
 			color: black;
 			text-align: center;
 		}
 		
-		.pet img{
+		.infopet img{
 			width: 100%;
 			border-radius: 8px;
+		}	
+		.infopet:hover{
+			cursor: pointer;
 		}
-		
-		.retorno a{
-			text-decoration: none;
-		}
-		
-		.retorno ul{
+		.infoloc ul{
 			list-style: none;
 			color: black;
 		}
 		
-		.retorno h2{
+		.infoloc  h2{
 			color: black;
 			text-align: center;
 		}
 		
-		.retorno img{
-			width: 100%;
-			border-radius: 8px;
+		.infodono ul{
+			list-style: none;
+			color: black;
 		}
 		
-		.retorno:hover{
-			transform: scale(1.05);
-			cursor:pointer;
-			background-color: #c29fc7;
-			}
-		.pet li, p{
-			font-weight: normal;
+		.infodono  h2{
+			color: black;
+			text-align: center;
+		}
+		
+		.infoloc li{
+			font-weight: bold;
 		}
 		.desaparecidos{
 			color:#d5afdf;
@@ -185,7 +187,8 @@
 	</div>
 	<br>
 <div class="pets">	
-		<div class="pet">
+	<div class="pet">
+		<div class="infopet" onclick="mostrarDiv()">
 		<h2>Menguinho</h2>
 		<img src="img/julio.jpg" alt="macaco do flamengo">
 			<ul>
@@ -193,50 +196,84 @@
 				<li>Cor: marrom e preto</li>
 				<li>Sexo: macho</li>
 				<li>Idade: 10 anos</li>
-				<li>Visto pela última vez?</li> 
-				<p>Visto há uma semana em frente a Praça das Pitangueiras.</p>
-				<h3>Contato</h3>
-				<li>E-mail: FuracaoRubroNegro@hotmail.com</li>
-				<li>Telefone: 55924676941</li>
-			</ul>
+			</ul>	
 		</div>
-		<div class="pet">
+		<div class="js" id="js">
+		<div class="infoloc" id="infoloc">	
+		<ul>
+				<li>Visto pela última vez?</li> 
+				<p>Em frente a Praça das Pitangueiras.</p>
+				<li>Data: 20/03/2026</li>
+		</ul>		
+		</div>		
+		<div class="infodono" id="infodono">
+		<ul>
+				<h3>Contato</h3>
+				<li>E-mail: RubroNegro@gmail.com</li>
+				<li>Telefone: 55924676941</li>
+		</ul>	
+		</div>	
+		</div>	
+	</div>		
+	<div class="pet">
+			<div class="infopet" onclick="mostrarDiv2()">
 			<h2>Pepe</h2>
-		<img src="img/pepe.webp" alt="sapo sorridente">
+		<img src="img/pepe2.jpg" alt="sapo sorridente">
 			<ul>
 				<li>Raça: risus</li>
 				<li>Cor: verde</li>
 				<li>Sexo: macho</li>
 				<li>Idade: 15 anos</li>
+			</ul>	
+			</div>	
+		<div class="js" id="js2">	
+			<div class="infoloc">
+			<ul>	
 				<li>Visto pela última vez?</li>
-				<p>Visto há uma semana em frente a Praça das Pitangueiras.</p>
+				<p>Em frente a lagoa.</p>
+				<li>Data: 06/07/2025</li>
+			</ul>	
+			</div>	
+			<div class="infodono">
+				<ul>
 				<h3>Contato</h3>
 				<li>E-mail: ElonCrusaderx1e@yahoo.com</li>
 				<li>Telefone: 21943570984</li>
-			</ul>
-		</div>
-		 <div class="retorno">
-        <h2 id="nome"></h2>
-        <img id="foto">
+				</ul>
+			</div>
+		</div>	
+		</div>	
+	<div class="retorno">
+		<div class="infopet" onclick="mostrarDiv3()">
+			<h2 id="nome"></h2>
+			<img id="foto">
 
         <ul>
             <li id="raca"></li>
             <li id="cor"></li>
             <li id="sexo"></li>
             <li id="idade"></li>
-
+		</ul>	
+		</div>
+	<div class="js" id="js3">	
+		<div class="infoloc">
+		<ul>
             <li>Visto pela última vez?</li>
             <p id="descricao"></p>
 
             <li id="data"></li>
-
+		</ul>	
+		</div>
+		<div class="infodono">	
+		<ul>
             <h3>Contato</h3>
             <li id="email"></li>
             <li id="telefone"></li>
         </ul>
+		</div>
+	</div>
     </div>
-	</div>
-	</div>
+</div>
 	<script>
 	document.getElementById("nome").textContent =
 		"" + localStorage.getItem("nome");
@@ -270,6 +307,7 @@
 		document.getElementById("foto").src = foto; 
 	}
 	</script>
+		<script src="js/scriptHiddendiv.js"></script>
 <footer>
 	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
 </footer>

@@ -1,42 +1,41 @@
+
 <!Doctype html>
 <head>
-		<meta charset="utf-8">
-		<meta lang="pt-br">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="noindex,follow">
-		<title>Cadastrar Pet</title>
-		<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-		<style>
-			body{
-		font-family: Concert One, sans-serif;
-		margin:0;
-		padding:0;
-		line-height:1.6;
-		background: linear-gradient(135deg, #f4e1f7, #d5afdf);
+	<meta charset="utf-8">
+	<meta lang="pt-br">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastrar Pet</title>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+	<style>
+		body{
+			font-family: Concert One, sans-serif;
+			margin:0;
+			padding:0;
+			line-height:1.6;
+			background: linear-gradient(135deg, #f4e1f7, #d5afdf);
 		}
-	.upbar{
-		width: 1250px;
-		height: 20vh;
-		background: linear-gradient(90deg, #a97db0, #9457a4);
-		color: black;
-		margin: 20px auto;
-		border-radius: 15px;
-		box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		.upbar{
+			width: 1250px;
+			height: 20vh;
+			background: linear-gradient(90deg, #a97db0, #9457a4);
+			color: black;
+			margin: 20px auto;
+			border-radius: 15px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
 		}
-	.upbar h1{
+		.upbar h1{
 		padding-top: 10px;
-		color: black;
-		font-size: 35px;
+			color: black;
+			font-size: 35px;
 		}
-	nav ul{
-		list-style: none;
-		padding:0;
-		display:flex;
-		justify-content:center;
-		gap: 80px;
-		}
-			
+		nav ul{
+			list-style: none;
+			padding:0;
+			display:flex;
+			justify-content:center;
+			gap: 80px;
+		}	
 		nav a{ 
 			text-decoration: none;
 			color: black;
@@ -79,29 +78,33 @@
 			font-weight: bold;
 			color: black;
 		}
-		button{
-				width: 105%;
-				padding: 15px;
-				background-color: #9457a4;
-				border: none;
-				color: white;
-				font-size: 16px;
-				border-radius: 8px;
-				cursor: pointer;
-				transition: 0.3s;
-			}
-			button:hover{
-				background-color: #a97db0;
-			}
-			.reset-btn{
-				background-color: #e74c3c;
-				margin-top: 10px;
-				}
-				
-			.reset-btn:hover{
-				background-color: #c0392b;
-			}
-			
+		button {
+			padding: 12px 20px;
+			font-size: 1.05rem;
+			font-weight: bold;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.2s;
+			margin-top: 15px;
+		}
+		button:hover{
+			background-color: #a97db0;
+		}
+		.reset-btn{
+			background-color: #FF7081;
+			margin-top: 10px;
+		}
+		label[for="sexo"] ~ input[type="radio"] + label,
+		label:has(input[type="radio"]) {
+		display: inline-block;
+		margin-right: 30px;
+		font-weight: normal;
+		color: black;
+		}
+		.reset-btn:hover{
+			background-color: #FF7081;
+		}	
 		footer{
 			background-color: #9457a4;
 			color: black;
@@ -110,6 +113,9 @@
 			margin-top: 15px;
 			padding: 10px;
 			box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+		}
+		label[for="foto"]{
+		border-color: #9457a4;
 		}
 		</style>
 </head>
@@ -132,49 +138,31 @@
 	<div class="container">
 		<h2 align="center">Cadastre seu bichinho desaparecido</h2>
 		<form id="cadastrar">
-
-		<label for="nome">Nome</label>
-		<input type="text" id="nome" placeholder="Nome do seu bichinho" required>
-
-		<label for="foto">Foto</label>
-		<input type="file" id="foto" required>
-
-		<label for="raca">Raça</label>
-		<input type="text" id="raca" placeholder="Raça do seu bichinho">
-
-		<label for="cor">Cor</label>
-		<input type="text" id="cor" placeholder="Cor do seu bichinho">
-
-		<label>Sexo</label>
-		<label for="femea">
-		<input type="radio" id="femea" name="sexo" value="femea" required> Fêmea
-		</label>
-		<label for="macho">
-        <input type="radio" id="macho" name="sexo" value="macho" required> Macho
-		</label>
-
-		<label for="idade">Idade</label>
-		<input type="text" id="idade" placeholder="Idade do seu bichinho">
-
-		<label for="descricao">Visto pela última vez?</label>
-		<textarea id="descricao" rows="10" placeholder="Digite aqui..." required></textarea>
-
-		<label for="data">Data</label>
-		<input type="date" id="data" required>
-
-		<h3>Contato</h3>
-
-		<label for="email">E-mail</label>
-		<input type="email" id="email" placeholder="Seu email">
-
-		<label for="telefone">Telefone</label>
-		<input type="text" id="telefone" placeholder="Seu telefone" required>
-
-		<button type="submit" href="desaparecidos.html">Cadastrar pet</button>
-		<button type="reset" class="reset-btn">Limpar</button>
-	</div>	
-
-</form>
+			<label>Nome</label>
+			<input type="text" id="nome" placeholder="Nome do seu bichinho" required>
+			<label>Foto</label>
+			<input type="file" id="foto" placeholder="foto do seu bichinho" required>
+			<label>Raça</label>
+			<input type="text" id="raca" placeholder="Raça do seu bichinho">
+			<label>Cor</label>
+			<input type="text" id="cor" placeholder="cor do seu bichinho">
+			<label>Sexo</label>
+			<label><input type="radio" requided>Fêmea</label>
+			<label><input type="radio" requided>Macho</label>
+			<label>Idade</label>
+			<input type="text" placeholder="Idade do seu bichinho">
+			<label>Visto pela última vez?</label>
+			<textarea rows="10" cols="50" placeholder="Digite aqui..." required></textarea>
+			<input type="date" required>
+			<h3>Contato</h3>
+			<label>E-mail</label>
+			<input type="email" placeholder="Seu email">
+			<label>Telefone</label>
+			<input type="text" placeholder="Seu telefone" required>
+			<button type="submit" >Cadastrar pet</button> 
+			<button type="reset" class="reset-btn">Limpar</button>
+			</form>
+</div>
 	
 	
 <script src="js/script_missing.js"></script>
