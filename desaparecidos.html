@@ -275,37 +275,45 @@
     </div>
 </div>
 	<script>
+	function pegarDado(chave) {
+    return sessionStorage.getItem(chave) || "";
+}
+
 	document.getElementById("nome").textContent =
-		"" + localStorage.getItem("nome");
+		pegarDado("nome");
 
 	document.getElementById("raca").textContent =
-		"Raça: " + localStorage.getItem("raca");
+		"Raça: " + pegarDado("raca");
 
 	document.getElementById("cor").textContent =
-		"Cor: " + localStorage.getItem("cor");
+		"Cor: " + pegarDado("cor");
 
 	document.getElementById("sexo").textContent =
-		"Sexo: " + localStorage.getItem("sexo");
+		"Sexo: " + pegarDado("sexo");
 
 	document.getElementById("idade").textContent =
-		"Idade: " + localStorage.getItem("idade");
+		"Idade: " + pegarDado("idade");
 
 	document.getElementById("descricao").textContent =
-		"Descrição: " + localStorage.getItem("descricao");
+		pegarDado("descricao");
 
 	document.getElementById("data").textContent =
-		"Data: " + localStorage.getItem("data");
+		"Data: " + pegarDado("data");
 
 	document.getElementById("email").textContent =
-		"E-mail: " + localStorage.getItem("email");
+		"E-mail: " + pegarDado("email");
 
 	document.getElementById("telefone").textContent =
-		"Telefone: " + localStorage.getItem("telefone");
+		"Telefone: " + pegarDado("telefone");
 
-	const foto = localStorage.getItem("foto"); //explicar
+	const foto = sessionStorage.getItem("foto");
+
 	if (foto) {
-		document.getElementById("foto").src = foto; 
+		document.getElementById("foto").src = foto;
 	}
+	if (!sessionStorage.getItem("nome")) {
+    document.querySelector(".retorno").style.display = "none";
+}
 	</script>
 		<script src="js/scriptHiddendiv.js"></script>
 <footer>

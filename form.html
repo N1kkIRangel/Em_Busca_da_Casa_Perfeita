@@ -136,19 +136,19 @@
 			<h2>Formulario de Adoção</h2>
 			<form id="formulario" action="resultado"> 
 				<label>Nome</label>
-				<input type="text" id="nome" required>
+				<input type="text" id="nome" placeholder="Nome completo"required>
 				<label>E-mail</label>
-				<input type="email" id="email" required>
+				<input type="email" id="email"  placeholder="E-mail" required>
 				<label>Data de nascimento</label>
 				<input type="date" id="data" required>
 				<label>Cidade</label>
-				<input type="text" id="cidade" required>
+				<input type="text" id="cidade" placeholder="Sua cidade"required>
 				<label>Bairro</label>
-				<input type="text" id="bairro">
-				<label>Cep</label>
-				<input type="text" id="cep">
+				<input type="text" id="bairro" placeholder="Seu bairro">
+				<label>CEP</label>
+				<input type="text" id="cep" placeholder="Seu CEP">
 				<label>Telefone</label>
-				<input type="text" id="telefone" required>
+				<input type="text" id="telefone" placeholder="Seu telefone" required>
 				<h2 align="center">Ambiente familiar</h2>
 				<input type="number" placeholder="Quantos membros tem em sua casa?" required>
 				<select required>
@@ -157,7 +157,7 @@
 				<option>Não</option>
 				</select>
 				<label class="font">Nos conte sobre seu ambiente familiar e o por quê quer adotar esse pet.</label>
-				<textarea rows="20" required>Digite aqui...</textarea>
+				<textarea rows="20" cols="50" placeholder="Digite aqui..."required></textarea>
 				<button onclick="mensagem()">Enviar</button>
 				<button type="reset">Limpar</button>
 			</form>
