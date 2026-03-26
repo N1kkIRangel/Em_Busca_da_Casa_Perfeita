@@ -275,30 +275,22 @@
     </div>
 </div>
 	<script>
-const dados = JSON.parse(sessionStorage.getItem("pet"));
-
-const div = document.getElementById("resultado");
-
-if (dados) {
-    div.innerHTML = `
-    <p><strong>Nome:</strong> ${dados.nome}</p>
-    <p><strong>Raça:</strong> ${dados.raca}</p>
-    <p><strong>Cor:</strong> ${dados.cor}</p>
-    <p><strong>Sexo:</strong> ${dados.sexo}</p>
-    <p><strong>Idade:</strong> ${dados.idade}</p>
-    <p><strong>Descrição:</strong> ${dados.descricao}</p>
-    <p><strong>Data:</strong> ${dados.data}</p>
-    <p><strong>Email:</strong> ${dados.email}</p>
-    <p><strong>Telefone:</strong> ${dados.telefone}</p>
-    `;
-
-    // limpa depois de mostrar
-    sessionStorage.removeItem("pet");
-}
-
-function voltar() {
-    window.location.href = "formulario.html";
-}
+				document.getElementById("nome").textContent=
+				"Nome: " + sessionStorage.setItem("nome");
+				document.getElementById("raca").textContent=
+				"Raça: " + sessionStorage.setItem("raca");
+				document.getElementById("cor").textContent=
+				"Cor: " + sessionStorage.setItem("cor");
+				document.getElementById("idade").textContent=
+				"Idade: " + sessionStorage.setItem("idade");
+				document.getElementById("descricao").textContent=
+				"Descrição: " + sessionStorage.setItem("descricao");
+				document.getElementById("data").textContent=
+				"Data: " + sessionStorage.setItem("data");
+				document.getElementById("email").textContent=
+				"Email: " + sessionStorage.setItem("email");
+				document.getElementById("telefone").textContent=
+				"Telefone: " + sessionStorage.setItem("telefone");
 </script>
 
 		<script src="js/scriptHiddendiv.js"></script>

@@ -1,22 +1,29 @@
 const form = document.getElementById("cadastrar");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const pet = {
-        nome: document.getElementById("nome").value,
-        raca: document.getElementById("raca").value,
-        cor: document.getElementById("cor").value,
-        idade: document.getElementById("idade").value,
-        descricao: document.getElementById("descricao").value,
-        data: document.getElementById("data").value,
-        email: document.getElementById("email").value,
-        telefone: document.getElementById("telefone").value,
-        sexo: document.querySelector('input[name="sexo"]:checked')?.value
-    };
+//adiciona evento quando clicar em enviar
+form.addEventListener("submit",function(event){
 	
-	//salva temporariamente
-    sessionStorage.setItem("pet", JSON.stringify(pet));
-   
-    window.location.href = "desaparecidos.html";
+	//impedir o envio padrão do formulário
+	event.preventDefault();
+	//paga os valores dos campos
+	const nome = document.getElementById("nome").value;
+	const cep = document.getElementById("raca").value;
+	const email = document.getElementById("cor").value;
+	const bairro = document.getElementById("idade").value;
+	const cidade = document.getElementById("descricao").value;
+	const estado = document.getElementById("data").value;
+	const estado = document.getElementById("email").value;
+	const estado = document.getElementById("telefone").value;
+	
+	//sala dados no localStorage
+	sessionStorage.setItem("nome", nome);
+	sessionStorage.setItem("raca", cep);
+	sessionStorage.setItem("cor", email);
+	sessionStorage.setItem("idade", bairro);
+	sessionStorage.setItem("descricao", cidade);
+	sessionStorage.setItem("data", estado);
+	sessionStorage.setItem("email", estado);
+	sessionStorage.setItem("telefone", estado);
+	
+	window.location.href="desaparecidos.html";
 });
