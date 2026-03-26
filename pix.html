@@ -110,7 +110,13 @@
 				<button onclick="copiarPix()">Copiar Pix</button>
 				<p style="margin-top: 15px;"><i class="fa-solid fa-paw"></i>Obrigado pela doação<i class="fa-solid fa-paw"></i></p>
 			</div>
-			<script src="js/java1.js"></script>
+		<script>
+			function copiarPix(){
+			const pix = document.getElementById("pixkey").innerText;
+			navigator.clipboard.writeText(pix);
+			alert("Chave Pix copiada!");
+			}
+		</script>
 		<footer>
 			<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
 		</footer>	

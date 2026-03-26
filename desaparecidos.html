@@ -275,46 +275,32 @@
     </div>
 </div>
 	<script>
-	function pegarDado(chave) {
-    return sessionStorage.getItem(chave) || "";
+const dados = JSON.parse(sessionStorage.getItem("pet"));
+
+const div = document.getElementById("resultado");
+
+if (dados) {
+    div.innerHTML = `
+    <p><strong>Nome:</strong> ${dados.nome}</p>
+    <p><strong>Raça:</strong> ${dados.raca}</p>
+    <p><strong>Cor:</strong> ${dados.cor}</p>
+    <p><strong>Sexo:</strong> ${dados.sexo}</p>
+    <p><strong>Idade:</strong> ${dados.idade}</p>
+    <p><strong>Descrição:</strong> ${dados.descricao}</p>
+    <p><strong>Data:</strong> ${dados.data}</p>
+    <p><strong>Email:</strong> ${dados.email}</p>
+    <p><strong>Telefone:</strong> ${dados.telefone}</p>
+    `;
+
+    // limpa depois de mostrar
+    sessionStorage.removeItem("pet");
 }
 
-	document.getElementById("nome").textContent =
-		pegarDado("nome");
-
-	document.getElementById("raca").textContent =
-		"Raça: " + pegarDado("raca");
-
-	document.getElementById("cor").textContent =
-		"Cor: " + pegarDado("cor");
-
-	document.getElementById("sexo").textContent =
-		"Sexo: " + pegarDado("sexo");
-
-	document.getElementById("idade").textContent =
-		"Idade: " + pegarDado("idade");
-
-	document.getElementById("descricao").textContent =
-		pegarDado("descricao");
-
-	document.getElementById("data").textContent =
-		"Data: " + pegarDado("data");
-
-	document.getElementById("email").textContent =
-		"E-mail: " + pegarDado("email");
-
-	document.getElementById("telefone").textContent =
-		"Telefone: " + pegarDado("telefone");
-
-	const foto = sessionStorage.getItem("foto");
-
-	if (foto) {
-		document.getElementById("foto").src = foto;
-	}
-	if (!sessionStorage.getItem("nome")) {
-    document.querySelector(".retorno").style.display = "none";
+function voltar() {
+    window.location.href = "formulario.html";
 }
-	</script>
+</script>
+
 		<script src="js/scriptHiddendiv.js"></script>
 <footer>
 	<i class="fa-solid fa-shield-dog"></i> 2026 Em busca da casa perfeita | Desenvolvido por: WebCreate
